@@ -34,7 +34,7 @@ if(isset($_POST['submit'])){
       elseif($row['user_type'] == 'foodVendor'){
 
       $_SESSION['user_name'] = $row['name'];
-      header('location:user_page.php');
+      header('location:foodVendor_page.php');
       }
      
    }else{

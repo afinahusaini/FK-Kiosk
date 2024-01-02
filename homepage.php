@@ -1,51 +1,71 @@
-<!DOCTYPE html>
-<html>
+<span style="font-family: verdana, geneva, sans-serif;"><!DOCTYPE html>
+<html lang="en">
 <head>
-    <title>Homepage Food Kiosk System</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Karma">
-    <link rel="stylesheet" href="homepage.css"> <!-- Include your style.css here -->
+  <meta charset="UTF-8" />
+  <title>Home</title>
+  <link rel="stylesheet" href="home.css" />
+  <!-- Font Awesome Cdn Link -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"/>
+
+
 </head>
 <body>
+  <div class="container">
+    <nav>
+      <ul>
+        <li><a href="#" class="logo">
+          <img src="umpsa-logo-new.jpeg" alt="">
+          <span class="nav-item">FK KIOSK </span>
+        </a></li>
 
-<!-- Sidebar (hidden by default) -->
-<nav class="w3-sidebar w3-bar-block w3-card w3-top w3-xlarge w3-animate-left" style="display:none;z-index:2;width:40%;min-width:300px" id="mySidebar">
-    <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button">Close Menu</a>
-    <a href="#Home" onclick="w3_close()" class="w3-bar-item w3-button">Home</a>
-    <a href="#menu" onclick="w3_close()" class="w3-bar-item w3-button">Menu</a>
-    <a href="#orders" onclick="w3_close()" class="w3-bar-item w3-button">Orders</a>
-    <a href="#dashboard" onclick="w3_close()" class="w3-bar-item w3-button">Dashboard</a>
-    <br><br><br><br><br>
-    <a href="webpage.php" onclick="w3_close()" class="w3-bar-item w3-button">Logout</a>
-</nav>
+        <li><a href="#">
+          <i class="fas fa-home"></i>
+          <span class="nav-item">Home</span>
+        </a></li>
 
-<!-- Top menu -->
-<div class="w3-top">
-    <div class="w3-white w3-xlarge" style="max: width 1000px;px;margin:auto">
-        <div class="w3-button w3-padding-16 w3-left" onclick="w3_open()">☰</div>
-        <div class="w3-right w3-padding-16">username</div>
-        <div class="w3-center w3-padding-16">FK Food Kiosk</div>
-    </div>
-</div>
-  
-<!-- !PAGE CONTENT! -->
-<div class="w3-main w3-content w3-padding" style="max-width:1200px;margin-top:100px">
-    <!-- Rest of your content remains unchanged -->
-    <!-- ... -->
-</div>
+        <li><a href="profile_page.php">
+          <i class="fas fa-user"></i>
+          <span class="nav-item">Profile</span>
+        </a></li>
 
-<script>
-    // Script to open and close sidebar
-    function w3_open() {
-        document.getElementById("mySidebar").style.display = "block";
-    }
+        <li><a href="">
+          <i class="fas fa-wallet"></i>
+          <span class="nav-item">Menu</span>
+        </a></li>
 
-    function w3_close() {
-        document.getElementById("mySidebar").style.display = "none";
-    }
-</script>
+        <li><a href="">
+          <i class="fas fa-chart-bar"></i>
+          <span class="nav-item">Orders</span>
+        </a></li>
 
+        <li><a href="dashboard.php">
+          <i class="fas fa-tasks"></i>
+          <span class="nav-item">Dashboard</span>
+        </a></li>
+
+        <li><a href="webpage.php" class="logout">
+          <i class="fas fa-sign-out-alt"></i>
+          <span class="nav-item">Log out</span>
+        </a></li>
+      </ul>
+    </nav>
+
+    <section class="main">
+      <div class="main-top">
+        <h1>Home</h1>
+        <i class="fas fa-user-cog"></i>
+      </div>
+      <div class="main-skills">
+
+        <div class="course-box">
+        <img src="fk.png" alt="">
+          
+        </div>
+        </div>
+      </section>
+    </section>
+  </div>
 </body>
-</html>
+</html></span>
+      

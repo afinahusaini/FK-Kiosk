@@ -1,0 +1,113 @@
+<span style="font-family: verdana, geneva, sans-serif;"><!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Profile</title>
+  <link rel="stylesheet" href="profile.css" />
+  <!-- Font Awesome Cdn Link -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head>
+<body>
+  <div class="container">
+    <nav>
+      <ul>
+        <li><a href="#" class="logo">
+          <img src="umpsa-logo-new.jpeg" alt="">
+          <span class="nav-item">FK KIOSK </span>
+        </a></li>
+
+        <li><a href="homepage.php">
+          <i class="fas fa-home"></i>
+          <span class="nav-item">Home</span>
+        </a></li>
+
+        <li><a href="profile_page.php">
+          <i class="fas fa-user"></i>
+          <span class="nav-item">Profile</span>
+        </a></li>
+
+        <li><a href="">
+          <i class="fas fa-wallet"></i>
+          <span class="nav-item">Menu</span>
+        </a></li>
+
+        <li><a href="">
+          <i class="fas fa-chart-bar"></i>
+          <span class="nav-item">Orders</span>
+        </a></li>
+
+        <li><a href="dashboard.php">
+          <i class="fas fa-tasks"></i>
+          <span class="nav-item">Dashboard</span>
+        </a></li>
+
+        <li><a href="webpage.php" class="logout">
+          <i class="fas fa-sign-out-alt"></i>
+          <span class="nav-item">Log out</span>
+        </a></li>
+      </ul>
+    </nav>
+
+    <section class="main">
+      <div class="main-top">
+        <h1>Profile</h1>
+        <i class="fas fa-user-cog"></i>
+      </div>
+      <div class="main-skills">
+
+      <section class="main-course">
+    <div class="course-box">
+
+
+    <?php
+    $counter = 1; // Initialize the counter
+    ?>
+    <section class="main-course">
+        <div class="course-box">
+            <?php
+            include("config.php");
+
+            $query = "SELECT * FROM user_form";
+            $result = mysqli_query($conn, $query);
+
+            if (mysqli_num_rows($result) > 0) {
+                // output data of each row
+                while ($row = mysqli_fetch_assoc($result)) {
+                    $id = $row["id"];
+                    $name = $row["name"];
+                    $email = $row["email"];
+                    $pass = $row["password"];
+                    //$cpass= $row["cpassword"];
+                    $user_type = $row["user_type"];
+                    ?>
+                    <li>
+                        <strong><?php echo $counter; ?>.</strong>
+                        Name: <?php echo $name; ?><br>
+                        Email: <?php echo $email; ?><br>
+                        Password: <?php echo str_repeat("*", strlen($pass)); ?><br>
+                        Type of User: <?php echo nl2br($user_type); ?><br>
+
+                        <form action="ubah.php" method="GET" style="display: inline;">
+                          <input type="hidden" name="id" value="<?php echo $id; ?>">
+                          <button type="submit" style="color: white; background-color: blue; padding: 5px 10px; border: none; border-radius: 3px;">Edit</button>
+                        </form>
+                        <form action="buang.php" method="GET" style="display: inline;">
+                          <input type="hidden" name="id" value="<?php echo $id; ?>">
+                          <button type="submit" style="color: white; background-color: red; padding: 5px 10px; border: none; border-radius: 3px;">Delete</button>
+                        </form>
+
+                    </li><br>
+                    <?php
+
+                    $counter++; // Increment the counter for the next iteration
+                }
+            } else {
+                echo "0 results";
+            }
+            ?>
+        </div>
+    </section>
+

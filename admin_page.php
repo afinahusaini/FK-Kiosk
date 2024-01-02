@@ -34,6 +34,7 @@ if(!isset($_SESSION['admin_name'])){
       <a href="sign_up.php" class="btn">register</a>
       <a href="logout.php" class="btn">logout</a>
       <a href="homepage.php" class="btn">home</a>
+      <a href="dashboard.php" class="btn">home</a>
    </div>
 
 </div>

@@ -26,33 +26,35 @@
    </style>
 
 <div class="form-container">
-
-   <form action="" method="post">
-      <h3>SIGN UP</h3>
-      <?php
-      if(isset($error)){
-         foreach($error as $error){
-            echo '<span class="error-msg">'.$error.'</span>';
-         };
-      };
-      ?>
-      <input type="text" name="name" required placeholder="enter your name">
-      <input type="email" name="email" required placeholder="enter your email">
-      <input type="password" name="password" required placeholder="enter your password">
-      <input type="password" name="cpassword" required placeholder="confirm your password">
-      <select name="user_type">
-         <option value="user">Student</option>
-         <option value="user">Staff</option>
-         <option value="admin">Admin</option>
-         <option value="foodVendor">Food Vendor</option>
-
-      </select>
-      
-      <input type="submit" name="submit" value="register now" class="form-btn" href="webpage.php" class="btn"></a>
-      <p>already have an account? <a href="webpage.php">login now</a></p>
-   </form>
-
+    <form action="" method="post">
+        <h3>SIGN UP</h3>
+        <?php
+        if(isset($error)){
+            foreach($error as $error){
+                echo '<span class="error-msg">'.$error.'</span>';
+            }
+        }
+        ?>
+        <input type="text" name="name" required placeholder="Enter your name">
+        <input type="email" name="email" required placeholder="Enter your email">
+        <input type="password" name="password" required placeholder="Enter your password">
+        <input type="password" name="cpassword" required placeholder="Confirm your password">
+        <select name="user_type">
+            <option value="user">Student</option>
+            <option value="user">Staff</option>
+            <option value="admin">Admin</option>
+            <option value="foodVendor">Food Vendor</option>
+        </select>
+        <input type="submit" name="submit" value="Register now" class="form-btn" onclick="showSuccessMessage()">
+        <p>Already have an account? <a href="webpage.php">Login now</a></p>
+    </form>
 </div>
+
+<script>
+    function showSuccessMessage() {
+        window.alert("Successful register!! ");
+    }
+</script>
 
 </body>
 </html>
