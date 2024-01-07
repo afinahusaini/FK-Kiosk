@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <title>Home</title>
-  <link rel="stylesheet" href="home.css" />
+  <link rel="stylesheet" href="checkout.css" />
   <!-- Font Awesome Cdn Link -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"/>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"/>
@@ -51,21 +51,50 @@
       </ul>
     </nav>
 
-    <section class="main">
-      <div class="main-top">
-        <h1>Home</h1>
-        <i class="fas fa-user-cog"></i>
-      </div>
-      <div class="main-skills">
+    <div class="listCard">
+        <!-- Displaying items in the cart -->
+        <!-- Dummy data from app.js -->
+        <div>
+          <img src="image/1.PNG" alt="Product 1">
+          <div>Product 1</div>
+          <div>RM12</div>
+          <!-- Quantity controls -->
+          <div>
+              <button onclick="changeQuantity(1, -1)">-</button>
+              <div class="count">1</div>
+              <button onclick="changeQuantity(1, 1)">+</button>
+          </div>
+        </div>
+        <div>
+          <img src="image/2.png" alt="Product 2">
+          <div>Product 2</div>
+          <div>RM20</div>
+          <!-- Quantity controls -->
+          <div class="quantity-control">
+    <button onclick="changeQuantity(2, -1)">-</button>
+    <div class="count">1</div>
+    <button onclick="changeQuantity(2, 1)">+</button>
+</div>
 
-        <div class="course-box">
-        <img src="fk.png" alt="">
-          
         </div>
-        </div>
-      </section>
+        <!-- Repeat for other items -->
+      </div>
+
+      <div class="checkout-container">
+  <div class="checkout-details">
+    <!-- Total price and other details -->
+    <div>Total Price: RM32</div>
+    <div>User Points: 100</div>
+    <button onclick="redeemPoints()">Redeem Points</button>
+    <div>Final Price after Redeeming: RM 68</div>
+    <button onclick="proceedToPayment()">Proceed to Payment</button>
+  </div>
+</div>
     </section>
   </div>
+
+
+  <!-- Your script file -->
+  <script src="app.js"></script>
 </body>
 </html></span>
-      

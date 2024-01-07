@@ -1,9 +1,11 @@
+
+
 <span style="font-family: verdana, geneva, sans-serif;"><!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Home</title>
-  <link rel="stylesheet" href="home.css" />
+  <title>Order</title>
+  <link rel="stylesheet" href="order.css" />
   <!-- Font Awesome Cdn Link -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"/>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"/>
@@ -52,15 +54,32 @@
     </nav>
 
     <section class="main">
-      <div class="main-top">
-        <h1>Home</h1>
-        <i class="fas fa-user-cog"></i>
+      <header>
+        <h1>Orders</h1>
+        <div class="shopping">
+          <img src="shopping.png">
+          <span class="quantity">0</span>
+        </div>
+      </header>
+      <div class="list">
+      
       </div>
-      <div class="main-skills">
+    </section>
+  </div>
 
-        <div class="course-box">
-        <img src="fk.png" alt="">
-          
+  <div class="card">
+    <h1>Cart</h1>
+    <ul class="listCard">
+      
+    </ul>
+    <div class="checkOut">
+      <div class="total">0</div>
+      <a href="checkout.php" id="goToCheckout" class="closeShopping">Go to Checkout</a>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+      
         </div>
         </div>
       </section>

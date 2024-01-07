@@ -1,6 +1,6 @@
 <?php
 
-$conn = mysqli_connect('localhost','root','','user_db');
+$conn = mysqli_connect('localhost','root','','kiosksystem');
 
 ?>
 <!-- dbase.php -->
@@ -22,7 +22,7 @@ if (mysqli_connect_errno())
 
 
 // To select one particular database to be used
-mysqli_select_db($conn,"user_db") or die( "Could not open products database");
+mysqli_select_db($conn,"kiosksystem") or die( "Could not open products database");
 
 //set the default time zone to use in Malaysia
 //date_default_timezone_set('Asia/Kuala_Lumpur');
